@@ -53,7 +53,7 @@ function TodoForm() {
           name="title" 
           value={title} 
           onChange={e=>setTitle(e.target.value)}
-          placeholder="Enter Title"
+          placeholder="Enter Title..."
           />
         </FormRow>
         <FormRow>
@@ -62,11 +62,11 @@ function TodoForm() {
           name="content" 
           value={content} 
           onChange={e=>setContent(e.target.value)} 
-          placeholder="Enter Content"
+          placeholder="Enter Content..."
           />
         </FormRow>
         <FormRow>
-          <Button>할일 추가</Button>
+          <Button variant="fill">ADD TODO</Button>
         </FormRow>
       </FormInner>
     </form>

@@ -1,15 +1,17 @@
 import { useMemo } from "react";
 import { Todo, useTodoState } from "../../contexts/TodosContext";
-import TodoItem from "../TodoItem/TodoItem";
 import styled from "styled-components";
+import TodoItem from "../TodoItem";
 
 const StyledList = styled.ul`
   background-color: #fff;
   border: 1px solid #000;
   min-height: 60px;
+  box-shadow: 3px 4px 0px 1px #000;
 `
 const StyledTitle = styled.h2`
   margin: 1rem 0;
+  text-transform: uppercase;
 `
 
 function TodoList() {
@@ -23,14 +25,14 @@ function TodoList() {
         return acc;
       },emptyTodos) || emptyTodos
   },[todos])
-
+  
   return(
     <div>
-      <StyledTitle>Working Todos</StyledTitle>
+      <StyledTitle>🎯Working</StyledTitle>
       <StyledList>
       {workingTodos.length > 0 && workingTodos.map(todo => <TodoItem key={todo.id} todo={todo}/>)}
       </StyledList>
-      <StyledTitle>Done Todos</StyledTitle>
+      <StyledTitle>✅Done</StyledTitle>
       <StyledList>
       {doneTodos.length > 0 && doneTodos.map(todo => <TodoItem key={todo.id} todo={todo}/>)}
       </StyledList>

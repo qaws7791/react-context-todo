@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   type?: 'submit' | 'reset' | 'button';
-  children?: React.ReactNode | string;
+  children?: React.ReactNode;
   variant?: 'fill' | 'outline';
   size?: 'small' | 'medium' | 'large';
 }
@@ -18,7 +18,7 @@ const SButton = styled.button<ButtonVariant>`
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
-  background-color: ${({variant}) => variant === 'fill' ? '#3c3c3c' : '#fff'};
+  background-color: ${({variant}) => variant === 'fill' ? '#d085fa' : '#fff'};
 
   ${({size}) =>
     size === 'large' &&
