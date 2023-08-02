@@ -44,7 +44,38 @@ export function todoReducer(state: State, action: Action): State {
 }
 
 const initialState: State = {
-  todos: []
+  todos: [
+    {
+        "id": 1690936650044,
+        "title": "첫 번째 할일",
+        "content": "과제 제출하기",
+        "isDone": true
+    },
+    {
+        "id": 1690936657833,
+        "title": "두 번째 할일",
+        "content": "알고리즘 문제 풀기",
+        "isDone": true
+    },
+    {
+        "id": 1690936736256,
+        "title": "세 번째 할일",
+        "content": "AWS 복습하기",
+        "isDone": false
+    },
+    {
+        "id": 1690936742182,
+        "title": "네 번째 할일",
+        "content": "TIL 작성하기",
+        "isDone": false
+    },
+    {
+        "id": 1690936753811,
+        "title": "다섯 번째 할일",
+        "content": "타입스크립트 복습하기",
+        "isDone": false
+    }
+]
 }
 
 // Provider For Todos Context Api
